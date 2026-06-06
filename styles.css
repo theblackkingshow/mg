@@ -273,6 +273,25 @@ main {
 .plan-cards {
   grid-template-columns: repeat(4, minmax(220px, 1fr));
 }
+/* Plan card layout: image aligned with plan details */
+.plan-cards article .plan-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.plan-media img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+.plan-body {
+  flex: 1;
+}
+.plan-body h3 {
+  margin-top: 0;
+}
 .plan-badge {
   display: inline-block;
   margin-bottom: 18px;
@@ -441,6 +460,9 @@ main {
   .luxury-grid,
   .luxury-stats {
     grid-template-columns: 1fr;
+  }
+  .plan-cards article .plan-card {
+    flex-direction: column;
   }
   .feature-call {
     grid-column: auto;
